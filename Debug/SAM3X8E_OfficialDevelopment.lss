@@ -1,0 +1,1844 @@
+
+SAM3X8E_OfficialDevelopment.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000958  00080000  00080000  00008000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .relocate     00000430  20000000  00080958  00010000  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000658  20000430  00080d88  00010430  2**2
+                  ALLOC
+  3 .stack        00000400  20000a88  000813e0  00010430  2**0
+                  ALLOC
+  4 .heap         00000200  20000e88  000817e0  00010430  2**0
+                  ALLOC
+  5 .ARM.attributes 00000029  00000000  00000000  00010430  2**0
+                  CONTENTS, READONLY
+  6 .comment      0000005b  00000000  00000000  00010459  2**0
+                  CONTENTS, READONLY
+  7 .debug_info   00007e49  00000000  00000000  000104b4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000013a3  00000000  00000000  000182fd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    00002192  00000000  00000000  000196a0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_aranges 00000378  00000000  00000000  0001b832  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000890  00000000  00000000  0001bbaa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_macro  000138cc  00000000  00000000  0001c43a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_line   0000496c  00000000  00000000  0002fd06  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_str    000544c1  00000000  00000000  00034672  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_frame  00000a14  00000000  00000000  00088b34  2**2
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00080000 <_sfixed>:
+   80000:	20000e88 	.word	0x20000e88
+   80004:	00080155 	.word	0x00080155
+   80008:	00080151 	.word	0x00080151
+   8000c:	00080151 	.word	0x00080151
+   80010:	00080151 	.word	0x00080151
+   80014:	00080151 	.word	0x00080151
+   80018:	00080151 	.word	0x00080151
+	...
+   8002c:	00080151 	.word	0x00080151
+   80030:	00080151 	.word	0x00080151
+   80034:	00000000 	.word	0x00000000
+   80038:	00080151 	.word	0x00080151
+   8003c:	00080151 	.word	0x00080151
+   80040:	00080151 	.word	0x00080151
+   80044:	00080151 	.word	0x00080151
+   80048:	00080151 	.word	0x00080151
+   8004c:	00080151 	.word	0x00080151
+   80050:	00080151 	.word	0x00080151
+   80054:	00080151 	.word	0x00080151
+   80058:	00080151 	.word	0x00080151
+   8005c:	00080151 	.word	0x00080151
+   80060:	00080295 	.word	0x00080295
+   80064:	00080151 	.word	0x00080151
+   80068:	00000000 	.word	0x00000000
+   8006c:	00080151 	.word	0x00080151
+   80070:	00080151 	.word	0x00080151
+   80074:	00080151 	.word	0x00080151
+   80078:	00080151 	.word	0x00080151
+	...
+   80084:	000802a9 	.word	0x000802a9
+   80088:	000802bd 	.word	0x000802bd
+   8008c:	00080151 	.word	0x00080151
+   80090:	000802d1 	.word	0x000802d1
+   80094:	00080151 	.word	0x00080151
+   80098:	000802e5 	.word	0x000802e5
+   8009c:	000802f9 	.word	0x000802f9
+   800a0:	00080151 	.word	0x00080151
+   800a4:	00000000 	.word	0x00000000
+   800a8:	00080151 	.word	0x00080151
+   800ac:	00080151 	.word	0x00080151
+   800b0:	00080151 	.word	0x00080151
+   800b4:	00080151 	.word	0x00080151
+   800b8:	00080151 	.word	0x00080151
+   800bc:	00080151 	.word	0x00080151
+   800c0:	00080151 	.word	0x00080151
+   800c4:	00080151 	.word	0x00080151
+   800c8:	00080151 	.word	0x00080151
+   800cc:	00080151 	.word	0x00080151
+   800d0:	00080151 	.word	0x00080151
+   800d4:	00080151 	.word	0x00080151
+   800d8:	00080151 	.word	0x00080151
+   800dc:	00080151 	.word	0x00080151
+   800e0:	00080151 	.word	0x00080151
+   800e4:	00080151 	.word	0x00080151
+   800e8:	00080151 	.word	0x00080151
+   800ec:	00080151 	.word	0x00080151
+   800f0:	00080151 	.word	0x00080151
+
+000800f4 <__do_global_dtors_aux>:
+   800f4:	b510      	push	{r4, lr}
+   800f6:	4c05      	ldr	r4, [pc, #20]	; (8010c <__do_global_dtors_aux+0x18>)
+   800f8:	7823      	ldrb	r3, [r4, #0]
+   800fa:	b933      	cbnz	r3, 8010a <__do_global_dtors_aux+0x16>
+   800fc:	4b04      	ldr	r3, [pc, #16]	; (80110 <__do_global_dtors_aux+0x1c>)
+   800fe:	b113      	cbz	r3, 80106 <__do_global_dtors_aux+0x12>
+   80100:	4804      	ldr	r0, [pc, #16]	; (80114 <__do_global_dtors_aux+0x20>)
+   80102:	f3af 8000 	nop.w
+   80106:	2301      	movs	r3, #1
+   80108:	7023      	strb	r3, [r4, #0]
+   8010a:	bd10      	pop	{r4, pc}
+   8010c:	20000430 	.word	0x20000430
+   80110:	00000000 	.word	0x00000000
+   80114:	00080958 	.word	0x00080958
+
+00080118 <frame_dummy>:
+   80118:	4b08      	ldr	r3, [pc, #32]	; (8013c <frame_dummy+0x24>)
+   8011a:	b510      	push	{r4, lr}
+   8011c:	b11b      	cbz	r3, 80126 <frame_dummy+0xe>
+   8011e:	4808      	ldr	r0, [pc, #32]	; (80140 <frame_dummy+0x28>)
+   80120:	4908      	ldr	r1, [pc, #32]	; (80144 <frame_dummy+0x2c>)
+   80122:	f3af 8000 	nop.w
+   80126:	4808      	ldr	r0, [pc, #32]	; (80148 <frame_dummy+0x30>)
+   80128:	6803      	ldr	r3, [r0, #0]
+   8012a:	b903      	cbnz	r3, 8012e <frame_dummy+0x16>
+   8012c:	bd10      	pop	{r4, pc}
+   8012e:	4b07      	ldr	r3, [pc, #28]	; (8014c <frame_dummy+0x34>)
+   80130:	2b00      	cmp	r3, #0
+   80132:	d0fb      	beq.n	8012c <frame_dummy+0x14>
+   80134:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+   80138:	4718      	bx	r3
+   8013a:	bf00      	nop
+   8013c:	00000000 	.word	0x00000000
+   80140:	00080958 	.word	0x00080958
+   80144:	20000434 	.word	0x20000434
+   80148:	00080958 	.word	0x00080958
+   8014c:	00000000 	.word	0x00000000
+
+00080150 <Dummy_Handler>:
+ * \brief Default interrupt handler for unused IRQs.
+ */
+void Dummy_Handler(void)
+{
+        while (1) {
+        }
+   80150:	e7fe      	b.n	80150 <Dummy_Handler>
+   80152:	bf00      	nop
+
+00080154 <Reset_Handler>:
+/**
+ * \brief This is the code that gets called on processor reset.
+ * To initialize the device, and call the main() routine.
+ */
+void Reset_Handler(void)
+{
+   80154:	b508      	push	{r3, lr}
+
+        /* Initialize the relocate segment */
+        pSrc = &_etext;
+        pDest = &_srelocate;
+
+        if (pSrc != pDest) {
+   80156:	4b1a      	ldr	r3, [pc, #104]	; (801c0 <Reset_Handler+0x6c>)
+   80158:	4a1a      	ldr	r2, [pc, #104]	; (801c4 <Reset_Handler+0x70>)
+   8015a:	429a      	cmp	r2, r3
+   8015c:	d003      	beq.n	80166 <Reset_Handler+0x12>
+                for (; pDest < &_erelocate;) {
+   8015e:	4b1a      	ldr	r3, [pc, #104]	; (801c8 <Reset_Handler+0x74>)
+   80160:	4a17      	ldr	r2, [pc, #92]	; (801c0 <Reset_Handler+0x6c>)
+   80162:	429a      	cmp	r2, r3
+   80164:	d304      	bcc.n	80170 <Reset_Handler+0x1c>
+                        *pDest++ = *pSrc++;
+                }
+        }
+
+        /* Clear the zero segment */
+        for (pDest = &_szero; pDest < &_ezero;) {
+   80166:	4b19      	ldr	r3, [pc, #100]	; (801cc <Reset_Handler+0x78>)
+   80168:	4a19      	ldr	r2, [pc, #100]	; (801d0 <Reset_Handler+0x7c>)
+   8016a:	429a      	cmp	r2, r3
+   8016c:	d310      	bcc.n	80190 <Reset_Handler+0x3c>
+   8016e:	e01b      	b.n	801a8 <Reset_Handler+0x54>
+   80170:	4913      	ldr	r1, [pc, #76]	; (801c0 <Reset_Handler+0x6c>)
+   80172:	1d0a      	adds	r2, r1, #4
+   80174:	4b17      	ldr	r3, [pc, #92]	; (801d4 <Reset_Handler+0x80>)
+   80176:	1a9b      	subs	r3, r3, r2
+   80178:	f023 0303 	bic.w	r3, r3, #3
+   8017c:	3304      	adds	r3, #4
+   8017e:	4a11      	ldr	r2, [pc, #68]	; (801c4 <Reset_Handler+0x70>)
+   80180:	4413      	add	r3, r2
+        pSrc = &_etext;
+        pDest = &_srelocate;
+
+        if (pSrc != pDest) {
+                for (; pDest < &_erelocate;) {
+                        *pDest++ = *pSrc++;
+   80182:	f852 0b04 	ldr.w	r0, [r2], #4
+   80186:	f841 0b04 	str.w	r0, [r1], #4
+        /* Initialize the relocate segment */
+        pSrc = &_etext;
+        pDest = &_srelocate;
+
+        if (pSrc != pDest) {
+                for (; pDest < &_erelocate;) {
+   8018a:	429a      	cmp	r2, r3
+   8018c:	d1f9      	bne.n	80182 <Reset_Handler+0x2e>
+   8018e:	e7ea      	b.n	80166 <Reset_Handler+0x12>
+   80190:	4b11      	ldr	r3, [pc, #68]	; (801d8 <Reset_Handler+0x84>)
+   80192:	4a12      	ldr	r2, [pc, #72]	; (801dc <Reset_Handler+0x88>)
+   80194:	1ad2      	subs	r2, r2, r3
+   80196:	f022 0203 	bic.w	r2, r2, #3
+   8019a:	441a      	add	r2, r3
+                        *pDest++ = *pSrc++;
+                }
+        }
+
+        /* Clear the zero segment */
+        for (pDest = &_szero; pDest < &_ezero;) {
+   8019c:	3b04      	subs	r3, #4
+                *pDest++ = 0;
+   8019e:	2100      	movs	r1, #0
+   801a0:	f843 1b04 	str.w	r1, [r3], #4
+                        *pDest++ = *pSrc++;
+                }
+        }
+
+        /* Clear the zero segment */
+        for (pDest = &_szero; pDest < &_ezero;) {
+   801a4:	4293      	cmp	r3, r2
+   801a6:	d1fb      	bne.n	801a0 <Reset_Handler+0x4c>
+                *pDest++ = 0;
+        }
+
+        /* Set the vector table base address */
+        pSrc = (uint32_t *) & _sfixed;
+        SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
+   801a8:	4b0d      	ldr	r3, [pc, #52]	; (801e0 <Reset_Handler+0x8c>)
+   801aa:	f023 4360 	bic.w	r3, r3, #3758096384	; 0xe0000000
+   801ae:	f023 037f 	bic.w	r3, r3, #127	; 0x7f
+   801b2:	4a0c      	ldr	r2, [pc, #48]	; (801e4 <Reset_Handler+0x90>)
+   801b4:	6093      	str	r3, [r2, #8]
+
+        /* Initialize the C library */
+        __libc_init_array();
+   801b6:	4b0c      	ldr	r3, [pc, #48]	; (801e8 <Reset_Handler+0x94>)
+   801b8:	4798      	blx	r3
+
+        /* Branch to main function */
+        main();
+   801ba:	4b0c      	ldr	r3, [pc, #48]	; (801ec <Reset_Handler+0x98>)
+   801bc:	4798      	blx	r3
+
+        /* Infinite loop */
+        while (1);
+   801be:	e7fe      	b.n	801be <Reset_Handler+0x6a>
+   801c0:	20000000 	.word	0x20000000
+   801c4:	00080958 	.word	0x00080958
+   801c8:	20000430 	.word	0x20000430
+   801cc:	20000a88 	.word	0x20000a88
+   801d0:	20000430 	.word	0x20000430
+   801d4:	20000433 	.word	0x20000433
+   801d8:	20000434 	.word	0x20000434
+   801dc:	20000a8b 	.word	0x20000a8b
+   801e0:	00080000 	.word	0x00080000
+   801e4:	e000ed00 	.word	0xe000ed00
+   801e8:	00080685 	.word	0x00080685
+   801ec:	000803b9 	.word	0x000803b9
+
+000801f0 <SystemInit>:
+ * Initialize the System and update the SystemFrequency variable.
+ */
+void SystemInit( void )
+{
+  /* Set FWS according to SYS_BOARD_MCKR configuration */
+  EFC0->EEFC_FMR = EEFC_FMR_FWS(4);
+   801f0:	f44f 6380 	mov.w	r3, #1024	; 0x400
+   801f4:	4a20      	ldr	r2, [pc, #128]	; (80278 <SystemInit+0x88>)
+   801f6:	6013      	str	r3, [r2, #0]
+  EFC1->EEFC_FMR = EEFC_FMR_FWS(4);
+   801f8:	f502 7200 	add.w	r2, r2, #512	; 0x200
+   801fc:	6013      	str	r3, [r2, #0]
+
+  /* Initialize main oscillator */
+  if ( !(PMC->CKGR_MOR & CKGR_MOR_MOSCSEL) )
+   801fe:	4b1f      	ldr	r3, [pc, #124]	; (8027c <SystemInit+0x8c>)
+   80200:	6a1b      	ldr	r3, [r3, #32]
+   80202:	f013 7f80 	tst.w	r3, #16777216	; 0x1000000
+   80206:	d107      	bne.n	80218 <SystemInit+0x28>
+  {
+    PMC->CKGR_MOR = CKGR_MOR_KEY_PASSWD | SYS_BOARD_OSCOUNT | CKGR_MOR_MOSCRCEN | CKGR_MOR_MOSCXTEN;
+   80208:	4a1d      	ldr	r2, [pc, #116]	; (80280 <SystemInit+0x90>)
+   8020a:	4b1c      	ldr	r3, [pc, #112]	; (8027c <SystemInit+0x8c>)
+   8020c:	621a      	str	r2, [r3, #32]
+    while ( !(PMC->PMC_SR & PMC_SR_MOSCXTS) )
+   8020e:	461a      	mov	r2, r3
+   80210:	6e93      	ldr	r3, [r2, #104]	; 0x68
+   80212:	f013 0f01 	tst.w	r3, #1
+   80216:	d0fb      	beq.n	80210 <SystemInit+0x20>
+    {
+    }
+  }
+
+  /* Switch to 3-20MHz Xtal oscillator */
+  PMC->CKGR_MOR = CKGR_MOR_KEY_PASSWD | SYS_BOARD_OSCOUNT | CKGR_MOR_MOSCRCEN | CKGR_MOR_MOSCXTEN | CKGR_MOR_MOSCSEL;
+   80218:	4a1a      	ldr	r2, [pc, #104]	; (80284 <SystemInit+0x94>)
+   8021a:	4b18      	ldr	r3, [pc, #96]	; (8027c <SystemInit+0x8c>)
+   8021c:	621a      	str	r2, [r3, #32]
+
+  while ( !(PMC->PMC_SR & PMC_SR_MOSCSELS) )
+   8021e:	461a      	mov	r2, r3
+   80220:	6e93      	ldr	r3, [r2, #104]	; 0x68
+   80222:	f413 3f80 	tst.w	r3, #65536	; 0x10000
+   80226:	d0fb      	beq.n	80220 <SystemInit+0x30>
+  {
+  }
+ 	PMC->PMC_MCKR = (PMC->PMC_MCKR & ~(uint32_t)PMC_MCKR_CSS_Msk) | PMC_MCKR_CSS_MAIN_CLK;
+   80228:	4a14      	ldr	r2, [pc, #80]	; (8027c <SystemInit+0x8c>)
+   8022a:	6b13      	ldr	r3, [r2, #48]	; 0x30
+   8022c:	f023 0303 	bic.w	r3, r3, #3
+   80230:	f043 0301 	orr.w	r3, r3, #1
+   80234:	6313      	str	r3, [r2, #48]	; 0x30
+  while (!(PMC->PMC_SR & PMC_SR_MCKRDY))
+   80236:	6e93      	ldr	r3, [r2, #104]	; 0x68
+   80238:	f013 0f08 	tst.w	r3, #8
+   8023c:	d0fb      	beq.n	80236 <SystemInit+0x46>
+  {
+  }
+
+  /* Initialize PLLA */
+  PMC->CKGR_PLLAR = SYS_BOARD_PLLAR;
+   8023e:	4a12      	ldr	r2, [pc, #72]	; (80288 <SystemInit+0x98>)
+   80240:	4b0e      	ldr	r3, [pc, #56]	; (8027c <SystemInit+0x8c>)
+   80242:	629a      	str	r2, [r3, #40]	; 0x28
+  while ( !(PMC->PMC_SR & PMC_SR_LOCKA) )
+   80244:	461a      	mov	r2, r3
+   80246:	6e93      	ldr	r3, [r2, #104]	; 0x68
+   80248:	f013 0f02 	tst.w	r3, #2
+   8024c:	d0fb      	beq.n	80246 <SystemInit+0x56>
+  {
+  }
+
+  /* Switch to main clock */
+  PMC->PMC_MCKR = (SYS_BOARD_MCKR & ~PMC_MCKR_CSS_Msk) | PMC_MCKR_CSS_MAIN_CLK;
+   8024e:	2211      	movs	r2, #17
+   80250:	4b0a      	ldr	r3, [pc, #40]	; (8027c <SystemInit+0x8c>)
+   80252:	631a      	str	r2, [r3, #48]	; 0x30
+  while ( !(PMC->PMC_SR & PMC_SR_MCKRDY) )
+   80254:	461a      	mov	r2, r3
+   80256:	6e93      	ldr	r3, [r2, #104]	; 0x68
+   80258:	f013 0f08 	tst.w	r3, #8
+   8025c:	d0fb      	beq.n	80256 <SystemInit+0x66>
+  {
+  }
+
+  /* Switch to PLLA */
+  PMC->PMC_MCKR = SYS_BOARD_MCKR;
+   8025e:	2212      	movs	r2, #18
+   80260:	4b06      	ldr	r3, [pc, #24]	; (8027c <SystemInit+0x8c>)
+   80262:	631a      	str	r2, [r3, #48]	; 0x30
+  while ( !(PMC->PMC_SR & PMC_SR_MCKRDY) )
+   80264:	461a      	mov	r2, r3
+   80266:	6e93      	ldr	r3, [r2, #104]	; 0x68
+   80268:	f013 0f08 	tst.w	r3, #8
+   8026c:	d0fb      	beq.n	80266 <SystemInit+0x76>
+  {
+  }
+
+  SystemCoreClock = CHIP_FREQ_CPU_MAX;
+   8026e:	4a07      	ldr	r2, [pc, #28]	; (8028c <SystemInit+0x9c>)
+   80270:	4b07      	ldr	r3, [pc, #28]	; (80290 <SystemInit+0xa0>)
+   80272:	601a      	str	r2, [r3, #0]
+   80274:	4770      	bx	lr
+   80276:	bf00      	nop
+   80278:	400e0a00 	.word	0x400e0a00
+   8027c:	400e0600 	.word	0x400e0600
+   80280:	00370809 	.word	0x00370809
+   80284:	01370809 	.word	0x01370809
+   80288:	200d3f01 	.word	0x200d3f01
+   8028c:	0501bd00 	.word	0x0501bd00
+   80290:	20000000 	.word	0x20000000
+
+00080294 <UART_Handler>:
+
+UARTClass Serial(&rxBuffer1, &txBuffer1);
+
+//Interrupt Handler
+void UART_Handler(void)
+{
+   80294:	b508      	push	{r3, lr}
+	Serial.IrqHandler();
+   80296:	4802      	ldr	r0, [pc, #8]	; (802a0 <UART_Handler+0xc>)
+   80298:	4b02      	ldr	r3, [pc, #8]	; (802a4 <UART_Handler+0x10>)
+   8029a:	4798      	blx	r3
+   8029c:	bd08      	pop	{r3, pc}
+   8029e:	bf00      	nop
+   802a0:	2000044c 	.word	0x2000044c
+   802a4:	00080589 	.word	0x00080589
+
+000802a8 <USART0_Handler>:
+USARTClass Serial1(1, &rxBuffer2, &txBuffer2);
+USARTClass Serial2(2, &rxBuffer3, &txBuffer3);
+USARTClass Serial3(3, &rxBuffer4, &txBuffer4);
+
+//Interrupt Handlers
+void USART0_Handler(void){
+   802a8:	b508      	push	{r3, lr}
+	Serial1.IrqHandler();
+   802aa:	4802      	ldr	r0, [pc, #8]	; (802b4 <USART0_Handler+0xc>)
+   802ac:	4b02      	ldr	r3, [pc, #8]	; (802b8 <USART0_Handler+0x10>)
+   802ae:	4798      	blx	r3
+   802b0:	bd08      	pop	{r3, pc}
+   802b2:	bf00      	nop
+   802b4:	20000454 	.word	0x20000454
+   802b8:	00080631 	.word	0x00080631
+
+000802bc <USART1_Handler>:
+}
+
+
+void USART1_Handler(void){
+   802bc:	b508      	push	{r3, lr}
+	Serial2.IrqHandler();
+   802be:	4802      	ldr	r0, [pc, #8]	; (802c8 <USART1_Handler+0xc>)
+   802c0:	4b02      	ldr	r3, [pc, #8]	; (802cc <USART1_Handler+0x10>)
+   802c2:	4798      	blx	r3
+   802c4:	bd08      	pop	{r3, pc}
+   802c6:	bf00      	nop
+   802c8:	2000047c 	.word	0x2000047c
+   802cc:	00080631 	.word	0x00080631
+
+000802d0 <USART3_Handler>:
+}
+
+
+void USART3_Handler(void){
+   802d0:	b508      	push	{r3, lr}
+	Serial3.IrqHandler();
+   802d2:	4802      	ldr	r0, [pc, #8]	; (802dc <USART3_Handler+0xc>)
+   802d4:	4b02      	ldr	r3, [pc, #8]	; (802e0 <USART3_Handler+0x10>)
+   802d6:	4798      	blx	r3
+   802d8:	bd08      	pop	{r3, pc}
+   802da:	bf00      	nop
+   802dc:	200004a4 	.word	0x200004a4
+   802e0:	00080631 	.word	0x00080631
+
+000802e4 <TWI0_Handler>:
+/** Class objects*/
+TwoWireClass Wire(TWI1);	//20, 21
+TwoWireClass Wire1(TWI0);	//Unlabeled
+
+/** Interrupt Handlers*/
+void TWI0_Handler(){ //Wire1
+   802e4:	b508      	push	{r3, lr}
+	Wire1.IRQHandler();
+   802e6:	4802      	ldr	r0, [pc, #8]	; (802f0 <TWI0_Handler+0xc>)
+   802e8:	4b02      	ldr	r3, [pc, #8]	; (802f4 <TWI0_Handler+0x10>)
+   802ea:	4798      	blx	r3
+   802ec:	bd08      	pop	{r3, pc}
+   802ee:	bf00      	nop
+   802f0:	200004cc 	.word	0x200004cc
+   802f4:	00080485 	.word	0x00080485
+
+000802f8 <TWI1_Handler>:
+};
+
+void TWI1_Handler(){ //Wire
+   802f8:	b508      	push	{r3, lr}
+	Wire.IRQHandler();
+   802fa:	4802      	ldr	r0, [pc, #8]	; (80304 <TWI1_Handler+0xc>)
+   802fc:	4b02      	ldr	r3, [pc, #8]	; (80308 <TWI1_Handler+0x10>)
+   802fe:	4798      	blx	r3
+   80300:	bd08      	pop	{r3, pc}
+   80302:	bf00      	nop
+   80304:	2000054c 	.word	0x2000054c
+   80308:	00080485 	.word	0x00080485
+
+0008030c <_GLOBAL__sub_I_txBuffer1>:
+
+/*****************
+SPI Objects
+******************/
+
+SPIClass SPI;
+   8030c:	e92d 4ff8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, sl, fp, lr}
+
+
+/*****************
+UART Objects
+******************/
+RingBufferClass txBuffer1;
+   80310:	4c22      	ldr	r4, [pc, #136]	; (8039c <_GLOBAL__sub_I_txBuffer1+0x90>)
+   80312:	4d23      	ldr	r5, [pc, #140]	; (803a0 <_GLOBAL__sub_I_txBuffer1+0x94>)
+   80314:	f504 76c0 	add.w	r6, r4, #384	; 0x180
+RingBufferClass rxBuffer1;
+   80318:	f504 7702 	add.w	r7, r4, #520	; 0x208
+
+
+/*****************
+UART Objects
+******************/
+RingBufferClass txBuffer1;
+   8031c:	4630      	mov	r0, r6
+   8031e:	47a8      	blx	r5
+RingBufferClass rxBuffer1;
+   80320:	4638      	mov	r0, r7
+   80322:	47a8      	blx	r5
+}
+
+/*****************
+USART Objects
+******************/
+RingBufferClass txBuffer2;
+   80324:	f504 7a24 	add.w	sl, r4, #656	; 0x290
+UART Objects
+******************/
+RingBufferClass txBuffer1;
+RingBufferClass rxBuffer1;
+
+UARTClass Serial(&rxBuffer1, &txBuffer1);
+   80328:	4639      	mov	r1, r7
+   8032a:	4632      	mov	r2, r6
+   8032c:	4b1d      	ldr	r3, [pc, #116]	; (803a4 <_GLOBAL__sub_I_txBuffer1+0x98>)
+   8032e:	4620      	mov	r0, r4
+   80330:	4798      	blx	r3
+
+/*****************
+USART Objects
+******************/
+RingBufferClass txBuffer2;
+RingBufferClass rxBuffer2;
+   80332:	f504 7b46 	add.w	fp, r4, #792	; 0x318
+}
+
+/*****************
+USART Objects
+******************/
+RingBufferClass txBuffer2;
+   80336:	4650      	mov	r0, sl
+   80338:	47a8      	blx	r5
+RingBufferClass rxBuffer2;
+RingBufferClass txBuffer3;
+   8033a:	f504 7868 	add.w	r8, r4, #928	; 0x3a0
+
+/*****************
+USART Objects
+******************/
+RingBufferClass txBuffer2;
+RingBufferClass rxBuffer2;
+   8033e:	4658      	mov	r0, fp
+   80340:	47a8      	blx	r5
+RingBufferClass txBuffer3;
+RingBufferClass rxBuffer3;
+   80342:	f504 6985 	add.w	r9, r4, #1064	; 0x428
+/*****************
+USART Objects
+******************/
+RingBufferClass txBuffer2;
+RingBufferClass rxBuffer2;
+RingBufferClass txBuffer3;
+   80346:	4640      	mov	r0, r8
+   80348:	47a8      	blx	r5
+RingBufferClass rxBuffer3;
+RingBufferClass txBuffer4;
+   8034a:	f504 6696 	add.w	r6, r4, #1200	; 0x4b0
+USART Objects
+******************/
+RingBufferClass txBuffer2;
+RingBufferClass rxBuffer2;
+RingBufferClass txBuffer3;
+RingBufferClass rxBuffer3;
+   8034e:	4648      	mov	r0, r9
+   80350:	47a8      	blx	r5
+RingBufferClass txBuffer4;
+RingBufferClass rxBuffer4;
+   80352:	f504 67a7 	add.w	r7, r4, #1336	; 0x538
+******************/
+RingBufferClass txBuffer2;
+RingBufferClass rxBuffer2;
+RingBufferClass txBuffer3;
+RingBufferClass rxBuffer3;
+RingBufferClass txBuffer4;
+   80356:	4630      	mov	r0, r6
+   80358:	47a8      	blx	r5
+RingBufferClass rxBuffer4;
+   8035a:	4638      	mov	r0, r7
+   8035c:	47a8      	blx	r5
+
+USARTClass Serial1(1, &rxBuffer2, &txBuffer2);
+   8035e:	4d12      	ldr	r5, [pc, #72]	; (803a8 <_GLOBAL__sub_I_txBuffer1+0x9c>)
+   80360:	465a      	mov	r2, fp
+   80362:	4653      	mov	r3, sl
+   80364:	f104 0008 	add.w	r0, r4, #8
+   80368:	2101      	movs	r1, #1
+   8036a:	47a8      	blx	r5
+USARTClass Serial2(2, &rxBuffer3, &txBuffer3);
+   8036c:	464a      	mov	r2, r9
+   8036e:	4643      	mov	r3, r8
+   80370:	f104 0030 	add.w	r0, r4, #48	; 0x30
+   80374:	2102      	movs	r1, #2
+   80376:	47a8      	blx	r5
+USARTClass Serial3(3, &rxBuffer4, &txBuffer4);
+   80378:	463a      	mov	r2, r7
+   8037a:	4633      	mov	r3, r6
+   8037c:	f104 0058 	add.w	r0, r4, #88	; 0x58
+   80380:	2103      	movs	r1, #3
+   80382:	47a8      	blx	r5
+/*****************
+I2C Objects
+******************/
+
+/** Class objects*/
+TwoWireClass Wire(TWI1);	//20, 21
+   80384:	4d09      	ldr	r5, [pc, #36]	; (803ac <_GLOBAL__sub_I_txBuffer1+0xa0>)
+   80386:	f504 7080 	add.w	r0, r4, #256	; 0x100
+   8038a:	4909      	ldr	r1, [pc, #36]	; (803b0 <_GLOBAL__sub_I_txBuffer1+0xa4>)
+   8038c:	47a8      	blx	r5
+TwoWireClass Wire1(TWI0);	//Unlabeled
+   8038e:	f104 0080 	add.w	r0, r4, #128	; 0x80
+   80392:	4908      	ldr	r1, [pc, #32]	; (803b4 <_GLOBAL__sub_I_txBuffer1+0xa8>)
+   80394:	47a8      	blx	r5
+   80396:	e8bd 8ff8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, sl, fp, pc}
+   8039a:	bf00      	nop
+   8039c:	2000044c 	.word	0x2000044c
+   803a0:	000803c5 	.word	0x000803c5
+   803a4:	00080581 	.word	0x00080581
+   803a8:	000805e1 	.word	0x000805e1
+   803ac:	00080429 	.word	0x00080429
+   803b0:	40090000 	.word	0x40090000
+   803b4:	4008c000 	.word	0x4008c000
+
+000803b8 <main>:
+#include "libraries.h"
+
+
+int main(void)
+{
+   803b8:	b508      	push	{r3, lr}
+    /* Initialize the SAM system */
+    SystemInit();
+   803ba:	4b01      	ldr	r3, [pc, #4]	; (803c0 <main+0x8>)
+   803bc:	4798      	blx	r3
+#include "libraries.h"
+
+
+int main(void)
+   803be:	e7fe      	b.n	803be <main+0x6>
+   803c0:	000801f1 	.word	0x000801f1
+
+000803c4 <_ZN15RingBufferClassC1Ev>:
+#include "../libraries.h"
+//#include <string.h>
+//#include <stdlib.h>
+
+//Constructor
+RingBufferClass::RingBufferClass(void){
+   803c4:	b510      	push	{r4, lr}
+   803c6:	4604      	mov	r4, r0
+	//Initialize everything to zero
+	writeLocation = 0;
+   803c8:	2300      	movs	r3, #0
+   803ca:	f8c0 3084 	str.w	r3, [r0, #132]	; 0x84
+	readLocation = 0;
+	memset((void *)ringBuffer, 0, BUFFER_SIZE);
+   803ce:	4619      	mov	r1, r3
+
+//Constructor
+RingBufferClass::RingBufferClass(void){
+	//Initialize everything to zero
+	writeLocation = 0;
+	readLocation = 0;
+   803d0:	f8c0 3080 	str.w	r3, [r0, #128]	; 0x80
+	memset((void *)ringBuffer, 0, BUFFER_SIZE);
+   803d4:	2280      	movs	r2, #128	; 0x80
+   803d6:	4b02      	ldr	r3, [pc, #8]	; (803e0 <_ZN15RingBufferClassC1Ev+0x1c>)
+   803d8:	4798      	blx	r3
+}
+   803da:	4620      	mov	r0, r4
+   803dc:	bd10      	pop	{r4, pc}
+   803de:	bf00      	nop
+   803e0:	0008079d 	.word	0x0008079d
+
+000803e4 <_ZN15RingBufferClass9storeDataEh>:
+	writeLocation = 0;
+}
+
+//Stores a single byte to the ringBuffer
+void RingBufferClass::storeData(uint8_t data){
+	uint32_t nextLocation = (uint32_t)(writeLocation + 1) % BUFFER_SIZE;
+   803e4:	f8d0 3084 	ldr.w	r3, [r0, #132]	; 0x84
+	
+	//Writes byte to the buffer at specified writeLocation. If the buffer is 
+	//full (nextlocation == readlocation), then skip writing and the data is lost.
+	if(nextLocation != readLocation){
+   803e8:	f8d0 2080 	ldr.w	r2, [r0, #128]	; 0x80
+	writeLocation = 0;
+}
+
+//Stores a single byte to the ringBuffer
+void RingBufferClass::storeData(uint8_t data){
+	uint32_t nextLocation = (uint32_t)(writeLocation + 1) % BUFFER_SIZE;
+   803ec:	3301      	adds	r3, #1
+   803ee:	f003 037f 	and.w	r3, r3, #127	; 0x7f
+	
+	//Writes byte to the buffer at specified writeLocation. If the buffer is 
+	//full (nextlocation == readlocation), then skip writing and the data is lost.
+	if(nextLocation != readLocation){
+   803f2:	4293      	cmp	r3, r2
+   803f4:	d004      	beq.n	80400 <_ZN15RingBufferClass9storeDataEh+0x1c>
+		ringBuffer[writeLocation] = data;
+   803f6:	f8d0 2084 	ldr.w	r2, [r0, #132]	; 0x84
+   803fa:	5481      	strb	r1, [r0, r2]
+		writeLocation = nextLocation;
+   803fc:	f8c0 3084 	str.w	r3, [r0, #132]	; 0x84
+   80400:	4770      	bx	lr
+   80402:	bf00      	nop
+
+00080404 <_ZN15RingBufferClass8readDataEv>:
+	}
+}
+
+//Reads a single byte from the ringBuffer
+uint8_t RingBufferClass::readData(){
+	uint32_t nextLocation = (uint32_t)(readLocation + 1) % BUFFER_SIZE;
+   80404:	f8d0 3080 	ldr.w	r3, [r0, #128]	; 0x80
+	uint8_t data;
+	
+	//Reads byte from the buffer at specified readLocation. If the buffer is
+	//full (nextlocation == writelocation), then skip reading and the data is lost.
+	if(nextLocation != writeLocation){
+   80408:	f8d0 2084 	ldr.w	r2, [r0, #132]	; 0x84
+	}
+}
+
+//Reads a single byte from the ringBuffer
+uint8_t RingBufferClass::readData(){
+	uint32_t nextLocation = (uint32_t)(readLocation + 1) % BUFFER_SIZE;
+   8040c:	3301      	adds	r3, #1
+   8040e:	f003 037f 	and.w	r3, r3, #127	; 0x7f
+	uint8_t data;
+	
+	//Reads byte from the buffer at specified readLocation. If the buffer is
+	//full (nextlocation == writelocation), then skip reading and the data is lost.
+	if(nextLocation != writeLocation){
+   80412:	4293      	cmp	r3, r2
+   80414:	d006      	beq.n	80424 <_ZN15RingBufferClass8readDataEv+0x20>
+		data = ringBuffer[readLocation];
+   80416:	f8d0 2080 	ldr.w	r2, [r0, #128]	; 0x80
+   8041a:	5c82      	ldrb	r2, [r0, r2]
+		readLocation = nextLocation;
+   8041c:	f8c0 3080 	str.w	r3, [r0, #128]	; 0x80
+		return data; //Read Success
+   80420:	4610      	mov	r0, r2
+   80422:	4770      	bx	lr
+	}
+	return 0; //Read Fail: Buffer full
+   80424:	2000      	movs	r0, #0
+}
+   80426:	4770      	bx	lr
+
+00080428 <_ZN12TwoWireClassC1EP3Twi>:
+	svBufferLength = 0; 
+	rxBufferIndex = 0;
+	svBufferIndex = 0;
+	
+	//Save pin numbers
+	if(twi == TWI1){ //Wire
+   80428:	4a14      	ldr	r2, [pc, #80]	; (8047c <_ZN12TwoWireClassC1EP3Twi+0x54>)
+/************************************************************************/
+/* Class Definition                                                     */
+/************************************************************************/
+
+/** Constructor*/
+TwoWireClass::TwoWireClass(Twi *pTwi){
+   8042a:	b410      	push	{r4}
+	twi = pTwi;
+	twiClock = 400000;
+   8042c:	4c14      	ldr	r4, [pc, #80]	; (80480 <_ZN12TwoWireClassC1EP3Twi+0x58>)
+	txBufferLength = 0;
+   8042e:	2300      	movs	r3, #0
+	svBufferLength = 0; 
+	rxBufferIndex = 0;
+	svBufferIndex = 0;
+	
+	//Save pin numbers
+	if(twi == TWI1){ //Wire
+   80430:	4291      	cmp	r1, r2
+/* Class Definition                                                     */
+/************************************************************************/
+
+/** Constructor*/
+TwoWireClass::TwoWireClass(Twi *pTwi){
+	twi = pTwi;
+   80432:	6001      	str	r1, [r0, #0]
+	twiClock = 400000;
+   80434:	60c4      	str	r4, [r0, #12]
+	txBufferLength = 0;
+   80436:	f880 3070 	strb.w	r3, [r0, #112]	; 0x70
+	rxBufferLength = 0;
+   8043a:	f880 3071 	strb.w	r3, [r0, #113]	; 0x71
+	svBufferLength = 0; 
+   8043e:	f880 3072 	strb.w	r3, [r0, #114]	; 0x72
+	rxBufferIndex = 0;
+   80442:	f880 3073 	strb.w	r3, [r0, #115]	; 0x73
+	svBufferIndex = 0;
+   80446:	f880 3074 	strb.w	r3, [r0, #116]	; 0x74
+	
+	//Save pin numbers
+	if(twi == TWI1){ //Wire
+   8044a:	d00b      	beq.n	80464 <_ZN12TwoWireClassC1EP3Twi+0x3c>
+		periphID = ID_TWI1;
+		IRQnID = TWI1_IRQn;
+	} else {		 //Wire1
+		SDA = 70;
+		SCL = 71;
+		periphID = ID_TWI0;
+   8044c:	2316      	movs	r3, #22
+		SDA = 20;
+		SCL = 21;
+		periphID = ID_TWI1;
+		IRQnID = TWI1_IRQn;
+	} else {		 //Wire1
+		SDA = 70;
+   8044e:	2146      	movs	r1, #70	; 0x46
+		SCL = 71;
+   80450:	2247      	movs	r2, #71	; 0x47
+		periphID = ID_TWI0;
+   80452:	7143      	strb	r3, [r0, #5]
+		IRQnID = TWI0_IRQn;
+   80454:	7103      	strb	r3, [r0, #4]
+	}
+	
+	status = UNINITIALIZED;
+   80456:	2300      	movs	r3, #0
+		SDA = 20;
+		SCL = 21;
+		periphID = ID_TWI1;
+		IRQnID = TWI1_IRQn;
+	} else {		 //Wire1
+		SDA = 70;
+   80458:	7181      	strb	r1, [r0, #6]
+		SCL = 71;
+   8045a:	71c2      	strb	r2, [r0, #7]
+		periphID = ID_TWI0;
+		IRQnID = TWI0_IRQn;
+	}
+	
+	status = UNINITIALIZED;
+   8045c:	7243      	strb	r3, [r0, #9]
+}
+   8045e:	f85d 4b04 	ldr.w	r4, [sp], #4
+   80462:	4770      	bx	lr
+	
+	//Save pin numbers
+	if(twi == TWI1){ //Wire
+		SDA = 20;
+		SCL = 21;
+		periphID = ID_TWI1;
+   80464:	2317      	movs	r3, #23
+	rxBufferIndex = 0;
+	svBufferIndex = 0;
+	
+	//Save pin numbers
+	if(twi == TWI1){ //Wire
+		SDA = 20;
+   80466:	2114      	movs	r1, #20
+		SCL = 21;
+   80468:	2215      	movs	r2, #21
+		periphID = ID_TWI1;
+   8046a:	7143      	strb	r3, [r0, #5]
+		IRQnID = TWI1_IRQn;
+   8046c:	7103      	strb	r3, [r0, #4]
+		SCL = 71;
+		periphID = ID_TWI0;
+		IRQnID = TWI0_IRQn;
+	}
+	
+	status = UNINITIALIZED;
+   8046e:	2300      	movs	r3, #0
+	rxBufferIndex = 0;
+	svBufferIndex = 0;
+	
+	//Save pin numbers
+	if(twi == TWI1){ //Wire
+		SDA = 20;
+   80470:	7181      	strb	r1, [r0, #6]
+		SCL = 21;
+   80472:	71c2      	strb	r2, [r0, #7]
+		SCL = 71;
+		periphID = ID_TWI0;
+		IRQnID = TWI0_IRQn;
+	}
+	
+	status = UNINITIALIZED;
+   80474:	7243      	strb	r3, [r0, #9]
+}
+   80476:	f85d 4b04 	ldr.w	r4, [sp], #4
+   8047a:	4770      	bx	lr
+   8047c:	40090000 	.word	0x40090000
+   80480:	00061a80 	.word	0x00061a80
+
+00080484 <_ZN12TwoWireClass10IRQHandlerEv>:
+void TwoWireClass::onRequest(void(*function)(void)){
+	onRequestCallback = function;
+}
+
+/** Interrupt Handler*/
+void TwoWireClass::IRQHandler(){
+   80484:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+	//Pull in status register information to help inform program of what happened
+	uint32_t regStatus = TWI_GetStatus(twi);
+   80486:	6803      	ldr	r3, [r0, #0]
+void TwoWireClass::onRequest(void(*function)(void)){
+	onRequestCallback = function;
+}
+
+/** Interrupt Handler*/
+void TwoWireClass::IRQHandler(){
+   80488:	4604      	mov	r4, r0
+ * \param pTwi  Pointer to an Twi instance.
+ * \return  TWI status register.
+ */
+uint32_t TWI_GetStatus(Twi *pTwi)
+{
+    return pTwi->TWI_SR;
+   8048a:	6a1d      	ldr	r5, [r3, #32]
+void TwoWireClass::IRQHandler(){
+	//Pull in status register information to help inform program of what happened
+	uint32_t regStatus = TWI_GetStatus(twi);
+
+	//Was the slave idle and then successfully accessed by a master?
+	if(status == SLAVE_IDLE && TWI_STATUS_SVACC(regStatus)){
+   8048c:	7a42      	ldrb	r2, [r0, #9]
+   8048e:	2a04      	cmp	r2, #4
+   80490:	d02b      	beq.n	804ea <_ZN12TwoWireClass10IRQHandlerEv+0x66>
+		}
+	}
+
+	
+	//If the slave is in the process of something else...
+	if(status != SLAVE_IDLE){
+   80492:	7a63      	ldrb	r3, [r4, #9]
+   80494:	2b04      	cmp	r3, #4
+   80496:	d01b      	beq.n	804d0 <_ZN12TwoWireClass10IRQHandlerEv+0x4c>
+   80498:	f640 0301 	movw	r3, #2049	; 0x801
+   8049c:	461a      	mov	r2, r3
+   8049e:	402b      	ands	r3, r5
+		//Is the Transmission Complete  && End of Slave Access flag set?
+		if(TWI_STATUS_TXCOMP(regStatus) && TWI_STATUS_EOSACC(regStatus)){
+   804a0:	4293      	cmp	r3, r2
+   804a2:	d115      	bne.n	804d0 <_ZN12TwoWireClass10IRQHandlerEv+0x4c>
+			
+			//If in Receive Mode and Receive Callback function exists
+			if(status == SLAVE_RECV && onReceiveCallback){
+   804a4:	7a63      	ldrb	r3, [r4, #9]
+   804a6:	2b05      	cmp	r3, #5
+   804a8:	d041      	beq.n	8052e <_ZN12TwoWireClass10IRQHandlerEv+0xaa>
+				//Tell the calling program to run
+				onReceiveCallback(rxBufferLength);
+			}
+
+			//Perform some buffer tidying
+			if(svBufferIndex >= svBufferLength){
+   804aa:	f894 2074 	ldrb.w	r2, [r4, #116]	; 0x74
+   804ae:	f894 3072 	ldrb.w	r3, [r4, #114]	; 0x72
+   804b2:	429a      	cmp	r2, r3
+   804b4:	d304      	bcc.n	804c0 <_ZN12TwoWireClass10IRQHandlerEv+0x3c>
+				svBufferIndex = 0;
+   804b6:	2300      	movs	r3, #0
+   804b8:	f884 3074 	strb.w	r3, [r4, #116]	; 0x74
+				svBufferLength = 0;
+   804bc:	f884 3072 	strb.w	r3, [r4, #114]	; 0x72
+ * \param pTwi  Pointer to an Twi instance.
+ * \param sources  Bitwise OR of selected interrupt sources.
+ */
+void TWI_DisableIt(Twi *pTwi, uint32_t sources)
+{
+    pTwi->TWI_IDR = sources;
+   804c0:	f640 5123 	movw	r1, #3363	; 0xd23
+				svBufferLength = 0;
+			} 
+
+
+			//Transfer is finished. Reset the interrupts and slave status.
+			TWI_EnableIt(twi, TWI_SR_SVACC);
+   804c4:	6823      	ldr	r3, [r4, #0]
+ * \param pTwi  Pointer to an Twi instance.
+ * \param sources  Bitwise OR of selected interrupt sources.
+ */
+void TWI_EnableIt(Twi *pTwi, uint32_t sources)
+{
+    pTwi->TWI_IER = sources;
+   804c6:	2010      	movs	r0, #16
+			//Transfer is finished. Reset the interrupts and slave status.
+			TWI_EnableIt(twi, TWI_SR_SVACC);
+			TWI_DisableIt(twi, TWI_IDR_RXRDY | TWI_IDR_GACC | TWI_IDR_NACK
+			| TWI_IDR_EOSACC | TWI_IDR_SCL_WS | TWI_IER_TXCOMP);
+			
+			status = SLAVE_IDLE;
+   804c8:	2204      	movs	r2, #4
+ * \param pTwi  Pointer to an Twi instance.
+ * \param sources  Bitwise OR of selected interrupt sources.
+ */
+void TWI_EnableIt(Twi *pTwi, uint32_t sources)
+{
+    pTwi->TWI_IER = sources;
+   804ca:	6258      	str	r0, [r3, #36]	; 0x24
+ * \param pTwi  Pointer to an Twi instance.
+ * \param sources  Bitwise OR of selected interrupt sources.
+ */
+void TWI_DisableIt(Twi *pTwi, uint32_t sources)
+{
+    pTwi->TWI_IDR = sources;
+   804cc:	6299      	str	r1, [r3, #40]	; 0x28
+			//Transfer is finished. Reset the interrupts and slave status.
+			TWI_EnableIt(twi, TWI_SR_SVACC);
+			TWI_DisableIt(twi, TWI_IDR_RXRDY | TWI_IDR_GACC | TWI_IDR_NACK
+			| TWI_IDR_EOSACC | TWI_IDR_SCL_WS | TWI_IER_TXCOMP);
+			
+			status = SLAVE_IDLE;
+   804ce:	7262      	strb	r2, [r4, #9]
+		}
+		
+	}
+	
+	if(status == SLAVE_RECV){
+   804d0:	7a63      	ldrb	r3, [r4, #9]
+   804d2:	2b05      	cmp	r3, #5
+   804d4:	d019      	beq.n	8050a <_ZN12TwoWireClass10IRQHandlerEv+0x86>
+			if(svBufferLength < I2C_BUFFER_LENGTH)
+				svBuffer[svBufferLength++] = TWI_ReadByte(twi);
+		}
+	}
+
+	if(status == SLAVE_SEND){
+   804d6:	7a63      	ldrb	r3, [r4, #9]
+   804d8:	2b06      	cmp	r3, #6
+   804da:	d000      	beq.n	804de <_ZN12TwoWireClass10IRQHandlerEv+0x5a>
+   804dc:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+		//Is the TX register ready && no previous NACK?
+		if(TWI_STATUS_TXRDY(regStatus) && !TWI_STATUS_NACK(regStatus)){
+   804de:	076a      	lsls	r2, r5, #29
+   804e0:	d5fc      	bpl.n	804dc <_ZN12TwoWireClass10IRQHandlerEv+0x58>
+   804e2:	f415 7580 	ands.w	r5, r5, #256	; 0x100
+   804e6:	d039      	beq.n	8055c <_ZN12TwoWireClass10IRQHandlerEv+0xd8>
+   804e8:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+void TwoWireClass::IRQHandler(){
+	//Pull in status register information to help inform program of what happened
+	uint32_t regStatus = TWI_GetStatus(twi);
+
+	//Was the slave idle and then successfully accessed by a master?
+	if(status == SLAVE_IDLE && TWI_STATUS_SVACC(regStatus)){
+   804ea:	06e8      	lsls	r0, r5, #27
+   804ec:	d5d1      	bpl.n	80492 <_ZN12TwoWireClass10IRQHandlerEv+0xe>
+ * \param pTwi  Pointer to an Twi instance.
+ * \param sources  Bitwise OR of selected interrupt sources.
+ */
+void TWI_EnableIt(Twi *pTwi, uint32_t sources)
+{
+    pTwi->TWI_IER = sources;
+   804ee:	f640 5223 	movw	r2, #3363	; 0xd23
+ * \param pTwi  Pointer to an Twi instance.
+ * \param sources  Bitwise OR of selected interrupt sources.
+ */
+void TWI_DisableIt(Twi *pTwi, uint32_t sources)
+{
+    pTwi->TWI_IDR = sources;
+   804f2:	2110      	movs	r1, #16
+   804f4:	6299      	str	r1, [r3, #40]	; 0x28
+ * \param pTwi  Pointer to an Twi instance.
+ * \param sources  Bitwise OR of selected interrupt sources.
+ */
+void TWI_EnableIt(Twi *pTwi, uint32_t sources)
+{
+    pTwi->TWI_IER = sources;
+   804f6:	625a      	str	r2, [r3, #36]	; 0x24
+		| TWI_IER_EOSACC | TWI_IER_SCL_WS | TWI_IER_TXCOMP);
+
+
+		// Detect if we should go into RECV or SEND status
+		// SVREAD==1 means *master* reading -> SLAVE_SEND pg.743
+		if (TWI_STATUS_SVREAD(regStatus)) {
+   804f8:	072b      	lsls	r3, r5, #28
+   804fa:	d515      	bpl.n	80528 <_ZN12TwoWireClass10IRQHandlerEv+0xa4>
+			status = SLAVE_SEND;
+
+			//Call the user attached function (if it exists) to send data 
+			if(onRequestCallback)
+   804fc:	6fa3      	ldr	r3, [r4, #120]	; 0x78
+
+
+		// Detect if we should go into RECV or SEND status
+		// SVREAD==1 means *master* reading -> SLAVE_SEND pg.743
+		if (TWI_STATUS_SVREAD(regStatus)) {
+			status = SLAVE_SEND;
+   804fe:	2206      	movs	r2, #6
+   80500:	7262      	strb	r2, [r4, #9]
+
+			//Call the user attached function (if it exists) to send data 
+			if(onRequestCallback)
+   80502:	2b00      	cmp	r3, #0
+   80504:	d0c5      	beq.n	80492 <_ZN12TwoWireClass10IRQHandlerEv+0xe>
+				onRequestCallback();
+   80506:	4798      	blx	r3
+   80508:	e7c3      	b.n	80492 <_ZN12TwoWireClass10IRQHandlerEv+0xe>
+		
+	}
+	
+	if(status == SLAVE_RECV){
+		//Is data ready to be read?
+		if(TWI_STATUS_RXRDY(regStatus)){
+   8050a:	07a9      	lsls	r1, r5, #30
+   8050c:	d5e3      	bpl.n	804d6 <_ZN12TwoWireClass10IRQHandlerEv+0x52>
+			//Is the svBuffer full of data?
+			if(svBufferLength < I2C_BUFFER_LENGTH)
+   8050e:	f894 3072 	ldrb.w	r3, [r4, #114]	; 0x72
+   80512:	2b1f      	cmp	r3, #31
+   80514:	d8df      	bhi.n	804d6 <_ZN12TwoWireClass10IRQHandlerEv+0x52>
+				svBuffer[svBufferLength++] = TWI_ReadByte(twi);
+   80516:	1c59      	adds	r1, r3, #1
+   80518:	6822      	ldr	r2, [r4, #0]
+   8051a:	f884 1072 	strb.w	r1, [r4, #114]	; 0x72
+ * \param pTwi  Pointer to an Twi instance.
+ * \return byte read.
+ */
+uint8_t TWI_ReadByte(Twi *pTwi)
+{
+    return pTwi->TWI_RHR;
+   8051e:	6b12      	ldr	r2, [r2, #48]	; 0x30
+	if(status == SLAVE_RECV){
+		//Is data ready to be read?
+		if(TWI_STATUS_RXRDY(regStatus)){
+			//Is the svBuffer full of data?
+			if(svBufferLength < I2C_BUFFER_LENGTH)
+				svBuffer[svBufferLength++] = TWI_ReadByte(twi);
+   80520:	4423      	add	r3, r4
+ * \param pTwi  Pointer to an Twi instance.
+ * \return byte read.
+ */
+uint8_t TWI_ReadByte(Twi *pTwi)
+{
+    return pTwi->TWI_RHR;
+   80522:	f883 2050 	strb.w	r2, [r3, #80]	; 0x50
+   80526:	e7d6      	b.n	804d6 <_ZN12TwoWireClass10IRQHandlerEv+0x52>
+
+			//Call the user attached function (if it exists) to send data 
+			if(onRequestCallback)
+				onRequestCallback();
+		} else {
+			status = SLAVE_RECV;
+   80528:	2305      	movs	r3, #5
+   8052a:	7263      	strb	r3, [r4, #9]
+   8052c:	e7b1      	b.n	80492 <_ZN12TwoWireClass10IRQHandlerEv+0xe>
+	if(status != SLAVE_IDLE){
+		//Is the Transmission Complete  && End of Slave Access flag set?
+		if(TWI_STATUS_TXCOMP(regStatus) && TWI_STATUS_EOSACC(regStatus)){
+			
+			//If in Receive Mode and Receive Callback function exists
+			if(status == SLAVE_RECV && onReceiveCallback){
+   8052e:	6fe7      	ldr	r7, [r4, #124]	; 0x7c
+   80530:	2f00      	cmp	r7, #0
+   80532:	d0ba      	beq.n	804aa <_ZN12TwoWireClass10IRQHandlerEv+0x26>
+				//Copy received data from svBuffer to rxBuffer. This way, more
+				//data can be put into the svBuffer while the callback function
+				//reads the rxBuffer. Makes sure two pieces of code aren't trying 
+				//to read and write to the svBuffer at the same time.
+				for(uint8_t i=0; i<svBufferLength; ++i)
+   80534:	f894 6072 	ldrb.w	r6, [r4, #114]	; 0x72
+   80538:	b146      	cbz	r6, 8054c <_ZN12TwoWireClass10IRQHandlerEv+0xc8>
+					rxBuffer[i] = svBuffer[i];
+   8053a:	1e72      	subs	r2, r6, #1
+   8053c:	b2d2      	uxtb	r2, r2
+   8053e:	3201      	adds	r2, #1
+   80540:	f104 0030 	add.w	r0, r4, #48	; 0x30
+   80544:	f104 0150 	add.w	r1, r4, #80	; 0x50
+   80548:	4b0c      	ldr	r3, [pc, #48]	; (8057c <_ZN12TwoWireClass10IRQHandlerEv+0xf8>)
+   8054a:	4798      	blx	r3
+				
+				//Updates the rxBuffer information to reflect the new data
+				rxBufferIndex = 0;
+   8054c:	2300      	movs	r3, #0
+				rxBufferLength = svBufferLength;
+   8054e:	f884 6071 	strb.w	r6, [r4, #113]	; 0x71
+
+				//Tell the calling program to run
+				onReceiveCallback(rxBufferLength);
+   80552:	4630      	mov	r0, r6
+				//to read and write to the svBuffer at the same time.
+				for(uint8_t i=0; i<svBufferLength; ++i)
+					rxBuffer[i] = svBuffer[i];
+				
+				//Updates the rxBuffer information to reflect the new data
+				rxBufferIndex = 0;
+   80554:	f884 3073 	strb.w	r3, [r4, #115]	; 0x73
+				rxBufferLength = svBufferLength;
+
+				//Tell the calling program to run
+				onReceiveCallback(rxBufferLength);
+   80558:	47b8      	blx	r7
+   8055a:	e7a6      	b.n	804aa <_ZN12TwoWireClass10IRQHandlerEv+0x26>
+		//Is the TX register ready && no previous NACK?
+		if(TWI_STATUS_TXRDY(regStatus) && !TWI_STATUS_NACK(regStatus)){
+			uint8_t c = 0;
+			
+			//Is there still data available to send?
+			if(svBufferIndex < svBufferLength){
+   8055c:	f894 3074 	ldrb.w	r3, [r4, #116]	; 0x74
+   80560:	f894 2072 	ldrb.w	r2, [r4, #114]	; 0x72
+   80564:	429a      	cmp	r2, r3
+   80566:	d905      	bls.n	80574 <_ZN12TwoWireClass10IRQHandlerEv+0xf0>
+				c = svBuffer[svBufferIndex++];
+   80568:	18e2      	adds	r2, r4, r3
+   8056a:	3301      	adds	r3, #1
+   8056c:	f892 5050 	ldrb.w	r5, [r2, #80]	; 0x50
+   80570:	f884 3074 	strb.w	r3, [r4, #116]	; 0x74
+			}
+// 			if(srvBuff.memUsed()>0)
+// 				c = srvBuff.readData();
+			TWI_WriteByte(twi, c);
+   80574:	6823      	ldr	r3, [r4, #0]
+ * \param pTwi  Pointer to an Twi instance.
+ * \param byte  Byte to send.
+ */
+void TWI_WriteByte(Twi *pTwi, uint8_t byte)
+{
+    pTwi->TWI_THR = byte;
+   80576:	635d      	str	r5, [r3, #52]	; 0x34
+   80578:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+   8057a:	bf00      	nop
+   8057c:	000806d5 	.word	0x000806d5
+
+00080580 <_ZN9UARTClassC1EP15RingBufferClassS1_>:
+#include "../libraries.h"
+
+//Constructor
+UARTClass::UARTClass(RingBufferClass *pRx_buffer, RingBufferClass *pTx_buffer){
+	rxBuffer = pRx_buffer;
+	txBuffer = pTx_buffer;
+   80580:	e880 0006 	stmia.w	r0, {r1, r2}
+}
+   80584:	4770      	bx	lr
+   80586:	bf00      	nop
+
+00080588 <_ZN9UARTClass10IrqHandlerEv>:
+
+uint8_t UARTClass::TX_availableToWrite(){
+	return txBuffer->memAvailable();
+}
+
+void UARTClass::IrqHandler(void){
+   80588:	b538      	push	{r3, r4, r5, lr}
+	uint32_t status = UART->UART_SR;
+   8058a:	4b12      	ldr	r3, [pc, #72]	; (805d4 <_ZN9UARTClass10IrqHandlerEv+0x4c>)
+
+uint8_t UARTClass::TX_availableToWrite(){
+	return txBuffer->memAvailable();
+}
+
+void UARTClass::IrqHandler(void){
+   8058c:	4605      	mov	r5, r0
+	uint32_t status = UART->UART_SR;
+   8058e:	695c      	ldr	r4, [r3, #20]
+	
+	// Did we receive data?
+	if ((status & UART_SR_RXRDY) == UART_SR_RXRDY)
+   80590:	07e2      	lsls	r2, r4, #31
+   80592:	d419      	bmi.n	805c8 <_ZN9UARTClass10IrqHandlerEv+0x40>
+	rxBuffer->storeData(UART->UART_RHR);
+
+	// Do we need to keep sending data?
+	if ((status & UART_SR_TXRDY) == UART_SR_TXRDY)
+   80594:	07a3      	lsls	r3, r4, #30
+   80596:	d50a      	bpl.n	805ae <_ZN9UARTClass10IrqHandlerEv+0x26>
+	{
+		if (txBuffer->readLocation != txBuffer->writeLocation) {
+   80598:	6868      	ldr	r0, [r5, #4]
+   8059a:	f8d0 2080 	ldr.w	r2, [r0, #128]	; 0x80
+   8059e:	f8d0 3084 	ldr.w	r3, [r0, #132]	; 0x84
+   805a2:	429a      	cmp	r2, r3
+   805a4:	d00c      	beq.n	805c0 <_ZN9UARTClass10IrqHandlerEv+0x38>
+// 			UART->UART_THR = txBuffer->ringBuffer[txBuffer->readLocation];
+// 			txBuffer->readLocation = (unsigned int)(txBuffer->readLocation + 1) % BUFFER_SIZE;
+			UART->UART_THR = txBuffer->readData();
+   805a6:	4b0c      	ldr	r3, [pc, #48]	; (805d8 <_ZN9UARTClass10IrqHandlerEv+0x50>)
+   805a8:	4798      	blx	r3
+   805aa:	4b0a      	ldr	r3, [pc, #40]	; (805d4 <_ZN9UARTClass10IrqHandlerEv+0x4c>)
+   805ac:	61d8      	str	r0, [r3, #28]
+			UART->UART_IDR = UART_IDR_TXRDY;
+		}
+	}
+
+	// Acknowledge errors
+	if ((status & UART_SR_OVRE) == UART_SR_OVRE || (status & UART_SR_FRAME) == UART_SR_FRAME)
+   805ae:	f014 0f60 	tst.w	r4, #96	; 0x60
+   805b2:	d004      	beq.n	805be <_ZN9UARTClass10IrqHandlerEv+0x36>
+	{
+		// TODO: error reporting outside ISR
+		UART->UART_CR |= UART_CR_RSTSTA;
+   805b4:	4a07      	ldr	r2, [pc, #28]	; (805d4 <_ZN9UARTClass10IrqHandlerEv+0x4c>)
+   805b6:	6813      	ldr	r3, [r2, #0]
+   805b8:	f443 7380 	orr.w	r3, r3, #256	; 0x100
+   805bc:	6013      	str	r3, [r2, #0]
+   805be:	bd38      	pop	{r3, r4, r5, pc}
+			UART->UART_THR = txBuffer->readData();
+		}
+		else
+		{
+			// Mask off transmit interrupt so we don't get it anymore
+			UART->UART_IDR = UART_IDR_TXRDY;
+   805c0:	4b04      	ldr	r3, [pc, #16]	; (805d4 <_ZN9UARTClass10IrqHandlerEv+0x4c>)
+   805c2:	2202      	movs	r2, #2
+   805c4:	60da      	str	r2, [r3, #12]
+   805c6:	e7f2      	b.n	805ae <_ZN9UARTClass10IrqHandlerEv+0x26>
+void UARTClass::IrqHandler(void){
+	uint32_t status = UART->UART_SR;
+	
+	// Did we receive data?
+	if ((status & UART_SR_RXRDY) == UART_SR_RXRDY)
+	rxBuffer->storeData(UART->UART_RHR);
+   805c8:	6999      	ldr	r1, [r3, #24]
+   805ca:	6800      	ldr	r0, [r0, #0]
+   805cc:	b2c9      	uxtb	r1, r1
+   805ce:	4b03      	ldr	r3, [pc, #12]	; (805dc <_ZN9UARTClass10IrqHandlerEv+0x54>)
+   805d0:	4798      	blx	r3
+   805d2:	e7df      	b.n	80594 <_ZN9UARTClass10IrqHandlerEv+0xc>
+   805d4:	400e0800 	.word	0x400e0800
+   805d8:	00080405 	.word	0x00080405
+   805dc:	000803e5 	.word	0x000803e5
+
+000805e0 <_ZN10USARTClassC1EmP15RingBufferClassS1_>:
+/************************************************************************/
+/* Constructor	                                                        */
+/************************************************************************/
+USARTClass::USARTClass(uint32_t channel, RingBufferClass *rxbuff, RingBufferClass *txbuff){
+
+	switch(channel)
+   805e0:	2902      	cmp	r1, #2
+
+
+/************************************************************************/
+/* Constructor	                                                        */
+/************************************************************************/
+USARTClass::USARTClass(uint32_t channel, RingBufferClass *rxbuff, RingBufferClass *txbuff){
+   805e2:	b470      	push	{r4, r5, r6}
+
+	switch(channel)
+   805e4:	d019      	beq.n	8061a <_ZN10USARTClassC1EmP15RingBufferClassS1_+0x3a>
+   805e6:	2903      	cmp	r1, #3
+   805e8:	d012      	beq.n	80610 <_ZN10USARTClassC1EmP15RingBufferClassS1_+0x30>
+   805ea:	2901      	cmp	r1, #1
+   805ec:	d001      	beq.n	805f2 <_ZN10USARTClassC1EmP15RingBufferClassS1_+0x12>
+	
+	txBuffer = txbuff;
+	rxBuffer = rxbuff;
+	
+	initialized = false;
+}
+   805ee:	bc70      	pop	{r4, r5, r6}
+   805f0:	4770      	bx	lr
+USARTClass::USARTClass(uint32_t channel, RingBufferClass *rxbuff, RingBufferClass *txbuff){
+
+	switch(channel)
+	{
+		case 1:
+		instance = USART0;
+   805f2:	4e0c      	ldr	r6, [pc, #48]	; (80624 <_ZN10USARTClassC1EmP15RingBufferClassS1_+0x44>)
+		instanceID = ID_USART0;
+   805f4:	2111      	movs	r1, #17
+		IRQNum = USART0_IRQn;
+		txPin  = 18;
+   805f6:	2512      	movs	r5, #18
+		rxPin  = 19;
+   805f8:	2413      	movs	r4, #19
+		rxPin  = 17;
+		break;
+		
+		case 3:
+		instance = USART3;
+		instanceID = ID_USART3;
+   805fa:	6101      	str	r1, [r0, #16]
+		IRQNum = USART3_IRQn;
+   805fc:	7301      	strb	r1, [r0, #12]
+	}
+	
+	txBuffer = txbuff;
+	rxBuffer = rxbuff;
+	
+	initialized = false;
+   805fe:	2100      	movs	r1, #0
+		txPin  = 16;
+		rxPin  = 17;
+		break;
+		
+		case 3:
+		instance = USART3;
+   80600:	6086      	str	r6, [r0, #8]
+		instanceID = ID_USART3;
+		IRQNum = USART3_IRQn;
+		txPin  = 14;
+   80602:	61c5      	str	r5, [r0, #28]
+		rxPin  = 15;
+   80604:	6184      	str	r4, [r0, #24]
+		break;
+		default: return;
+	}
+	
+	txBuffer = txbuff;
+	rxBuffer = rxbuff;
+   80606:	e880 000c 	stmia.w	r0, {r2, r3}
+	
+	initialized = false;
+}
+   8060a:	bc70      	pop	{r4, r5, r6}
+	}
+	
+	txBuffer = txbuff;
+	rxBuffer = rxbuff;
+	
+	initialized = false;
+   8060c:	6241      	str	r1, [r0, #36]	; 0x24
+}
+   8060e:	4770      	bx	lr
+		txPin  = 16;
+		rxPin  = 17;
+		break;
+		
+		case 3:
+		instance = USART3;
+   80610:	4e05      	ldr	r6, [pc, #20]	; (80628 <_ZN10USARTClassC1EmP15RingBufferClassS1_+0x48>)
+		instanceID = ID_USART3;
+   80612:	2114      	movs	r1, #20
+		IRQNum = USART3_IRQn;
+		txPin  = 14;
+   80614:	250e      	movs	r5, #14
+		rxPin  = 15;
+   80616:	240f      	movs	r4, #15
+   80618:	e7ef      	b.n	805fa <_ZN10USARTClassC1EmP15RingBufferClassS1_+0x1a>
+		txPin  = 18;
+		rxPin  = 19;
+		break;
+		
+		case 2:
+		instance = USART1;
+   8061a:	4e04      	ldr	r6, [pc, #16]	; (8062c <_ZN10USARTClassC1EmP15RingBufferClassS1_+0x4c>)
+		instanceID = ID_USART1;
+   8061c:	2112      	movs	r1, #18
+		IRQNum = USART1_IRQn;
+		txPin  = 16;
+   8061e:	2510      	movs	r5, #16
+		rxPin  = 17;
+   80620:	2411      	movs	r4, #17
+   80622:	e7ea      	b.n	805fa <_ZN10USARTClassC1EmP15RingBufferClassS1_+0x1a>
+   80624:	40098000 	.word	0x40098000
+   80628:	400a4000 	.word	0x400a4000
+   8062c:	4009c000 	.word	0x4009c000
+
+00080630 <_ZN10USARTClass10IrqHandlerEv>:
+uint8_t USARTClass::TX_availableToWrite(){
+	return txBuffer->memAvailable();
+}
+
+void USARTClass::IrqHandler(void){
+	uint32_t status = instance->US_CSR;
+   80630:	6883      	ldr	r3, [r0, #8]
+
+uint8_t USARTClass::TX_availableToWrite(){
+	return txBuffer->memAvailable();
+}
+
+void USARTClass::IrqHandler(void){
+   80632:	b570      	push	{r4, r5, r6, lr}
+	uint32_t status = instance->US_CSR;
+   80634:	695c      	ldr	r4, [r3, #20]
+
+uint8_t USARTClass::TX_availableToWrite(){
+	return txBuffer->memAvailable();
+}
+
+void USARTClass::IrqHandler(void){
+   80636:	4605      	mov	r5, r0
+	uint32_t status = instance->US_CSR;
+	
+	// Did we receive data?
+	if ((status & US_CSR_RXRDY) == US_CSR_RXRDY)
+   80638:	07e2      	lsls	r2, r4, #31
+   8063a:	d419      	bmi.n	80670 <_ZN10USARTClass10IrqHandlerEv+0x40>
+	rxBuffer->storeData(instance->US_RHR);
+
+	// Do we need to keep sending data?
+	if ((status & US_CSR_TXRDY) == US_CSR_TXRDY)
+   8063c:	07a3      	lsls	r3, r4, #30
+   8063e:	d50a      	bpl.n	80656 <_ZN10USARTClass10IrqHandlerEv+0x26>
+	{
+		if (txBuffer->readLocation != txBuffer->writeLocation) {
+   80640:	6868      	ldr	r0, [r5, #4]
+   80642:	f8d0 2080 	ldr.w	r2, [r0, #128]	; 0x80
+   80646:	f8d0 3084 	ldr.w	r3, [r0, #132]	; 0x84
+   8064a:	429a      	cmp	r2, r3
+   8064c:	d00c      	beq.n	80668 <_ZN10USARTClass10IrqHandlerEv+0x38>
+			//instance->US_THR = txBuffer->ringBuffer[txBuffer->readLocation];
+			//txBuffer->readLocation = (unsigned int)(txBuffer->readLocation + 1) % BUFFER_SIZE;
+			instance->US_THR = txBuffer->readData();
+   8064e:	4b0b      	ldr	r3, [pc, #44]	; (8067c <_ZN10USARTClass10IrqHandlerEv+0x4c>)
+   80650:	68ae      	ldr	r6, [r5, #8]
+   80652:	4798      	blx	r3
+   80654:	61f0      	str	r0, [r6, #28]
+			instance->US_IDR = US_IDR_TXRDY;
+		}
+	}
+
+	// Acknowledge errors
+	if ((status & US_CSR_OVRE) == US_CSR_OVRE || (status & US_CSR_FRAME) == US_CSR_FRAME)
+   80656:	f014 0f60 	tst.w	r4, #96	; 0x60
+   8065a:	d004      	beq.n	80666 <_ZN10USARTClass10IrqHandlerEv+0x36>
+	{
+		// TODO: error reporting outside ISR
+		instance->US_CR |= US_CR_RSTSTA;
+   8065c:	68aa      	ldr	r2, [r5, #8]
+   8065e:	6813      	ldr	r3, [r2, #0]
+   80660:	f443 7380 	orr.w	r3, r3, #256	; 0x100
+   80664:	6013      	str	r3, [r2, #0]
+   80666:	bd70      	pop	{r4, r5, r6, pc}
+			instance->US_THR = txBuffer->readData();
+		}
+		else
+		{
+			// Mask off transmit interrupt so we don't get it anymore
+			instance->US_IDR = US_IDR_TXRDY;
+   80668:	68ab      	ldr	r3, [r5, #8]
+   8066a:	2202      	movs	r2, #2
+   8066c:	60da      	str	r2, [r3, #12]
+   8066e:	e7f2      	b.n	80656 <_ZN10USARTClass10IrqHandlerEv+0x26>
+void USARTClass::IrqHandler(void){
+	uint32_t status = instance->US_CSR;
+	
+	// Did we receive data?
+	if ((status & US_CSR_RXRDY) == US_CSR_RXRDY)
+	rxBuffer->storeData(instance->US_RHR);
+   80670:	6999      	ldr	r1, [r3, #24]
+   80672:	6800      	ldr	r0, [r0, #0]
+   80674:	b2c9      	uxtb	r1, r1
+   80676:	4b02      	ldr	r3, [pc, #8]	; (80680 <_ZN10USARTClass10IrqHandlerEv+0x50>)
+   80678:	4798      	blx	r3
+   8067a:	e7df      	b.n	8063c <_ZN10USARTClass10IrqHandlerEv+0xc>
+   8067c:	00080405 	.word	0x00080405
+   80680:	000803e5 	.word	0x000803e5
+
+00080684 <__libc_init_array>:
+   80684:	b570      	push	{r4, r5, r6, lr}
+   80686:	4e0f      	ldr	r6, [pc, #60]	; (806c4 <__libc_init_array+0x40>)
+   80688:	4d0f      	ldr	r5, [pc, #60]	; (806c8 <__libc_init_array+0x44>)
+   8068a:	1b76      	subs	r6, r6, r5
+   8068c:	10b6      	asrs	r6, r6, #2
+   8068e:	bf18      	it	ne
+   80690:	2400      	movne	r4, #0
+   80692:	d005      	beq.n	806a0 <__libc_init_array+0x1c>
+   80694:	3401      	adds	r4, #1
+   80696:	f855 3b04 	ldr.w	r3, [r5], #4
+   8069a:	4798      	blx	r3
+   8069c:	42a6      	cmp	r6, r4
+   8069e:	d1f9      	bne.n	80694 <__libc_init_array+0x10>
+   806a0:	4e0a      	ldr	r6, [pc, #40]	; (806cc <__libc_init_array+0x48>)
+   806a2:	4d0b      	ldr	r5, [pc, #44]	; (806d0 <__libc_init_array+0x4c>)
+   806a4:	f000 f944 	bl	80930 <_init>
+   806a8:	1b76      	subs	r6, r6, r5
+   806aa:	10b6      	asrs	r6, r6, #2
+   806ac:	bf18      	it	ne
+   806ae:	2400      	movne	r4, #0
+   806b0:	d006      	beq.n	806c0 <__libc_init_array+0x3c>
+   806b2:	3401      	adds	r4, #1
+   806b4:	f855 3b04 	ldr.w	r3, [r5], #4
+   806b8:	4798      	blx	r3
+   806ba:	42a6      	cmp	r6, r4
+   806bc:	d1f9      	bne.n	806b2 <__libc_init_array+0x2e>
+   806be:	bd70      	pop	{r4, r5, r6, pc}
+   806c0:	bd70      	pop	{r4, r5, r6, pc}
+   806c2:	bf00      	nop
+   806c4:	0008093c 	.word	0x0008093c
+   806c8:	0008093c 	.word	0x0008093c
+   806cc:	00080948 	.word	0x00080948
+   806d0:	0008093c 	.word	0x0008093c
+
+000806d4 <memmove>:
+   806d4:	4288      	cmp	r0, r1
+   806d6:	b5f0      	push	{r4, r5, r6, r7, lr}
+   806d8:	d90d      	bls.n	806f6 <memmove+0x22>
+   806da:	188b      	adds	r3, r1, r2
+   806dc:	4298      	cmp	r0, r3
+   806de:	d20a      	bcs.n	806f6 <memmove+0x22>
+   806e0:	1881      	adds	r1, r0, r2
+   806e2:	2a00      	cmp	r2, #0
+   806e4:	d054      	beq.n	80790 <memmove+0xbc>
+   806e6:	1a9a      	subs	r2, r3, r2
+   806e8:	f813 4d01 	ldrb.w	r4, [r3, #-1]!
+   806ec:	4293      	cmp	r3, r2
+   806ee:	f801 4d01 	strb.w	r4, [r1, #-1]!
+   806f2:	d1f9      	bne.n	806e8 <memmove+0x14>
+   806f4:	bdf0      	pop	{r4, r5, r6, r7, pc}
+   806f6:	2a0f      	cmp	r2, #15
+   806f8:	d948      	bls.n	8078c <memmove+0xb8>
+   806fa:	ea40 0301 	orr.w	r3, r0, r1
+   806fe:	079b      	lsls	r3, r3, #30
+   80700:	d147      	bne.n	80792 <memmove+0xbe>
+   80702:	4615      	mov	r5, r2
+   80704:	f100 0410 	add.w	r4, r0, #16
+   80708:	f101 0310 	add.w	r3, r1, #16
+   8070c:	f853 6c10 	ldr.w	r6, [r3, #-16]
+   80710:	3d10      	subs	r5, #16
+   80712:	f844 6c10 	str.w	r6, [r4, #-16]
+   80716:	f853 6c0c 	ldr.w	r6, [r3, #-12]
+   8071a:	2d0f      	cmp	r5, #15
+   8071c:	f844 6c0c 	str.w	r6, [r4, #-12]
+   80720:	f853 6c08 	ldr.w	r6, [r3, #-8]
+   80724:	f104 0410 	add.w	r4, r4, #16
+   80728:	f844 6c18 	str.w	r6, [r4, #-24]
+   8072c:	f853 6c04 	ldr.w	r6, [r3, #-4]
+   80730:	f103 0310 	add.w	r3, r3, #16
+   80734:	f844 6c14 	str.w	r6, [r4, #-20]
+   80738:	d8e8      	bhi.n	8070c <memmove+0x38>
+   8073a:	f1a2 0310 	sub.w	r3, r2, #16
+   8073e:	f023 030f 	bic.w	r3, r3, #15
+   80742:	f002 0e0f 	and.w	lr, r2, #15
+   80746:	3310      	adds	r3, #16
+   80748:	f1be 0f03 	cmp.w	lr, #3
+   8074c:	4419      	add	r1, r3
+   8074e:	4403      	add	r3, r0
+   80750:	d921      	bls.n	80796 <memmove+0xc2>
+   80752:	460e      	mov	r6, r1
+   80754:	4674      	mov	r4, lr
+   80756:	1f1d      	subs	r5, r3, #4
+   80758:	f856 7b04 	ldr.w	r7, [r6], #4
+   8075c:	3c04      	subs	r4, #4
+   8075e:	2c03      	cmp	r4, #3
+   80760:	f845 7f04 	str.w	r7, [r5, #4]!
+   80764:	d8f8      	bhi.n	80758 <memmove+0x84>
+   80766:	f1ae 0404 	sub.w	r4, lr, #4
+   8076a:	f024 0403 	bic.w	r4, r4, #3
+   8076e:	3404      	adds	r4, #4
+   80770:	4423      	add	r3, r4
+   80772:	4421      	add	r1, r4
+   80774:	f002 0203 	and.w	r2, r2, #3
+   80778:	b152      	cbz	r2, 80790 <memmove+0xbc>
+   8077a:	3b01      	subs	r3, #1
+   8077c:	440a      	add	r2, r1
+   8077e:	f811 4b01 	ldrb.w	r4, [r1], #1
+   80782:	4291      	cmp	r1, r2
+   80784:	f803 4f01 	strb.w	r4, [r3, #1]!
+   80788:	d1f9      	bne.n	8077e <memmove+0xaa>
+   8078a:	bdf0      	pop	{r4, r5, r6, r7, pc}
+   8078c:	4603      	mov	r3, r0
+   8078e:	e7f3      	b.n	80778 <memmove+0xa4>
+   80790:	bdf0      	pop	{r4, r5, r6, r7, pc}
+   80792:	4603      	mov	r3, r0
+   80794:	e7f1      	b.n	8077a <memmove+0xa6>
+   80796:	4672      	mov	r2, lr
+   80798:	e7ee      	b.n	80778 <memmove+0xa4>
+   8079a:	bf00      	nop
+
+0008079c <memset>:
+   8079c:	b470      	push	{r4, r5, r6}
+   8079e:	0784      	lsls	r4, r0, #30
+   807a0:	d046      	beq.n	80830 <memset+0x94>
+   807a2:	1e54      	subs	r4, r2, #1
+   807a4:	2a00      	cmp	r2, #0
+   807a6:	d041      	beq.n	8082c <memset+0x90>
+   807a8:	b2cd      	uxtb	r5, r1
+   807aa:	4603      	mov	r3, r0
+   807ac:	e002      	b.n	807b4 <memset+0x18>
+   807ae:	1e62      	subs	r2, r4, #1
+   807b0:	b3e4      	cbz	r4, 8082c <memset+0x90>
+   807b2:	4614      	mov	r4, r2
+   807b4:	f803 5b01 	strb.w	r5, [r3], #1
+   807b8:	079a      	lsls	r2, r3, #30
+   807ba:	d1f8      	bne.n	807ae <memset+0x12>
+   807bc:	2c03      	cmp	r4, #3
+   807be:	d92e      	bls.n	8081e <memset+0x82>
+   807c0:	b2cd      	uxtb	r5, r1
+   807c2:	ea45 2505 	orr.w	r5, r5, r5, lsl #8
+   807c6:	2c0f      	cmp	r4, #15
+   807c8:	ea45 4505 	orr.w	r5, r5, r5, lsl #16
+   807cc:	d919      	bls.n	80802 <memset+0x66>
+   807ce:	4626      	mov	r6, r4
+   807d0:	f103 0210 	add.w	r2, r3, #16
+   807d4:	3e10      	subs	r6, #16
+   807d6:	2e0f      	cmp	r6, #15
+   807d8:	f842 5c10 	str.w	r5, [r2, #-16]
+   807dc:	f842 5c0c 	str.w	r5, [r2, #-12]
+   807e0:	f842 5c08 	str.w	r5, [r2, #-8]
+   807e4:	f842 5c04 	str.w	r5, [r2, #-4]
+   807e8:	f102 0210 	add.w	r2, r2, #16
+   807ec:	d8f2      	bhi.n	807d4 <memset+0x38>
+   807ee:	f1a4 0210 	sub.w	r2, r4, #16
+   807f2:	f022 020f 	bic.w	r2, r2, #15
+   807f6:	f004 040f 	and.w	r4, r4, #15
+   807fa:	3210      	adds	r2, #16
+   807fc:	2c03      	cmp	r4, #3
+   807fe:	4413      	add	r3, r2
+   80800:	d90d      	bls.n	8081e <memset+0x82>
+   80802:	461e      	mov	r6, r3
+   80804:	4622      	mov	r2, r4
+   80806:	3a04      	subs	r2, #4
+   80808:	2a03      	cmp	r2, #3
+   8080a:	f846 5b04 	str.w	r5, [r6], #4
+   8080e:	d8fa      	bhi.n	80806 <memset+0x6a>
+   80810:	1f22      	subs	r2, r4, #4
+   80812:	f022 0203 	bic.w	r2, r2, #3
+   80816:	3204      	adds	r2, #4
+   80818:	4413      	add	r3, r2
+   8081a:	f004 0403 	and.w	r4, r4, #3
+   8081e:	b12c      	cbz	r4, 8082c <memset+0x90>
+   80820:	b2c9      	uxtb	r1, r1
+   80822:	441c      	add	r4, r3
+   80824:	f803 1b01 	strb.w	r1, [r3], #1
+   80828:	42a3      	cmp	r3, r4
+   8082a:	d1fb      	bne.n	80824 <memset+0x88>
+   8082c:	bc70      	pop	{r4, r5, r6}
+   8082e:	4770      	bx	lr
+   80830:	4614      	mov	r4, r2
+   80832:	4603      	mov	r3, r0
+   80834:	e7c2      	b.n	807bc <memset+0x20>
+   80836:	bf00      	nop
+
+00080838 <register_fini>:
+   80838:	4b02      	ldr	r3, [pc, #8]	; (80844 <register_fini+0xc>)
+   8083a:	b113      	cbz	r3, 80842 <register_fini+0xa>
+   8083c:	4802      	ldr	r0, [pc, #8]	; (80848 <register_fini+0x10>)
+   8083e:	f000 b805 	b.w	8084c <atexit>
+   80842:	4770      	bx	lr
+   80844:	00000000 	.word	0x00000000
+   80848:	00080859 	.word	0x00080859
+
+0008084c <atexit>:
+   8084c:	4601      	mov	r1, r0
+   8084e:	2000      	movs	r0, #0
+   80850:	4602      	mov	r2, r0
+   80852:	4603      	mov	r3, r0
+   80854:	f000 b816 	b.w	80884 <__register_exitproc>
+
+00080858 <__libc_fini_array>:
+   80858:	b538      	push	{r3, r4, r5, lr}
+   8085a:	4b08      	ldr	r3, [pc, #32]	; (8087c <__libc_fini_array+0x24>)
+   8085c:	4d08      	ldr	r5, [pc, #32]	; (80880 <__libc_fini_array+0x28>)
+   8085e:	1aed      	subs	r5, r5, r3
+   80860:	10ac      	asrs	r4, r5, #2
+   80862:	bf18      	it	ne
+   80864:	18ed      	addne	r5, r5, r3
+   80866:	d005      	beq.n	80874 <__libc_fini_array+0x1c>
+   80868:	3c01      	subs	r4, #1
+   8086a:	f855 3d04 	ldr.w	r3, [r5, #-4]!
+   8086e:	4798      	blx	r3
+   80870:	2c00      	cmp	r4, #0
+   80872:	d1f9      	bne.n	80868 <__libc_fini_array+0x10>
+   80874:	e8bd 4038 	ldmia.w	sp!, {r3, r4, r5, lr}
+   80878:	f000 b866 	b.w	80948 <_fini>
+   8087c:	00080954 	.word	0x00080954
+   80880:	00080958 	.word	0x00080958
+
+00080884 <__register_exitproc>:
+   80884:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+   80888:	4c25      	ldr	r4, [pc, #148]	; (80920 <__register_exitproc+0x9c>)
+   8088a:	4606      	mov	r6, r0
+   8088c:	6825      	ldr	r5, [r4, #0]
+   8088e:	4688      	mov	r8, r1
+   80890:	f8d5 4148 	ldr.w	r4, [r5, #328]	; 0x148
+   80894:	4692      	mov	sl, r2
+   80896:	4699      	mov	r9, r3
+   80898:	b3c4      	cbz	r4, 8090c <__register_exitproc+0x88>
+   8089a:	6860      	ldr	r0, [r4, #4]
+   8089c:	281f      	cmp	r0, #31
+   8089e:	dc17      	bgt.n	808d0 <__register_exitproc+0x4c>
+   808a0:	1c41      	adds	r1, r0, #1
+   808a2:	b176      	cbz	r6, 808c2 <__register_exitproc+0x3e>
+   808a4:	eb04 0380 	add.w	r3, r4, r0, lsl #2
+   808a8:	f8c3 a088 	str.w	sl, [r3, #136]	; 0x88
+   808ac:	f8d4 5188 	ldr.w	r5, [r4, #392]	; 0x188
+   808b0:	2201      	movs	r2, #1
+   808b2:	4082      	lsls	r2, r0
+   808b4:	4315      	orrs	r5, r2
+   808b6:	2e02      	cmp	r6, #2
+   808b8:	f8c4 5188 	str.w	r5, [r4, #392]	; 0x188
+   808bc:	f8c3 9108 	str.w	r9, [r3, #264]	; 0x108
+   808c0:	d01e      	beq.n	80900 <__register_exitproc+0x7c>
+   808c2:	1c83      	adds	r3, r0, #2
+   808c4:	6061      	str	r1, [r4, #4]
+   808c6:	2000      	movs	r0, #0
+   808c8:	f844 8023 	str.w	r8, [r4, r3, lsl #2]
+   808cc:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
+   808d0:	4b14      	ldr	r3, [pc, #80]	; (80924 <__register_exitproc+0xa0>)
+   808d2:	b303      	cbz	r3, 80916 <__register_exitproc+0x92>
+   808d4:	f44f 70c8 	mov.w	r0, #400	; 0x190
+   808d8:	f3af 8000 	nop.w
+   808dc:	4604      	mov	r4, r0
+   808de:	b1d0      	cbz	r0, 80916 <__register_exitproc+0x92>
+   808e0:	f8d5 3148 	ldr.w	r3, [r5, #328]	; 0x148
+   808e4:	2700      	movs	r7, #0
+   808e6:	e884 0088 	stmia.w	r4, {r3, r7}
+   808ea:	4638      	mov	r0, r7
+   808ec:	f8c5 4148 	str.w	r4, [r5, #328]	; 0x148
+   808f0:	2101      	movs	r1, #1
+   808f2:	f8c4 7188 	str.w	r7, [r4, #392]	; 0x188
+   808f6:	f8c4 718c 	str.w	r7, [r4, #396]	; 0x18c
+   808fa:	2e00      	cmp	r6, #0
+   808fc:	d0e1      	beq.n	808c2 <__register_exitproc+0x3e>
+   808fe:	e7d1      	b.n	808a4 <__register_exitproc+0x20>
+   80900:	f8d4 318c 	ldr.w	r3, [r4, #396]	; 0x18c
+   80904:	431a      	orrs	r2, r3
+   80906:	f8c4 218c 	str.w	r2, [r4, #396]	; 0x18c
+   8090a:	e7da      	b.n	808c2 <__register_exitproc+0x3e>
+   8090c:	f505 74a6 	add.w	r4, r5, #332	; 0x14c
+   80910:	f8c5 4148 	str.w	r4, [r5, #328]	; 0x148
+   80914:	e7c1      	b.n	8089a <__register_exitproc+0x16>
+   80916:	f04f 30ff 	mov.w	r0, #4294967295
+   8091a:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
+   8091e:	bf00      	nop
+   80920:	0008092c 	.word	0x0008092c
+   80924:	00000000 	.word	0x00000000
+   80928:	00000043 	.word	0x00000043
+
+0008092c <_global_impure_ptr>:
+   8092c:	20000008                                ... 
+
+00080930 <_init>:
+   80930:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+   80932:	bf00      	nop
+   80934:	bcf8      	pop	{r3, r4, r5, r6, r7}
+   80936:	bc08      	pop	{r3}
+   80938:	469e      	mov	lr, r3
+   8093a:	4770      	bx	lr
+
+0008093c <__init_array_start>:
+   8093c:	00080839 	.word	0x00080839
+
+00080940 <__frame_dummy_init_array_entry>:
+   80940:	00080119 0008030d                       ........
+
+00080948 <_fini>:
+   80948:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+   8094a:	bf00      	nop
+   8094c:	bcf8      	pop	{r3, r4, r5, r6, r7}
+   8094e:	bc08      	pop	{r3}
+   80950:	469e      	mov	lr, r3
+   80952:	4770      	bx	lr
+
+00080954 <__fini_array_start>:
+   80954:	000800f5 	.word	0x000800f5
